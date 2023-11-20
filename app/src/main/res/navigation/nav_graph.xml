@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFlow">
+    <fragment
+        android:id="@+id/homeFlow"
+        android:name="com.engin.swiftreader.features.home.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_homeFlow_to_readDetailFragment"
+            app:destination="@id/readDetailFragment" />
+        <action
+            android:id="@+id/action_homeFlow_to_playFragment"
+            app:destination="@id/playFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFlow"
+        android:name="com.engin.swiftreader.SecondFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_second" />
+    <fragment
+        android:id="@+id/cameraFlow"
+        android:name="com.engin.swiftreader.features.readfromcamera.ReadWithCameraFragment"
+        android:label="@string/camera"
+        tools:layout="@layout/fragment_read_with_camera" />
+    <fragment
+        android:id="@+id/readDetailFragment"
+        android:name="com.engin.swiftreader.features.read_detail.ReadDetailFragment"
+        android:label="fragment_read_detail"
+        tools:layout="@layout/fragment_read_detail" />
+    <fragment
+        android:id="@+id/playFragment"
+        android:name="com.engin.swiftreader.features.play.PlayFragment"
+        android:label="PlayFragment"
+        tools:layout="@layout/fragment_play" /><action android:id="@+id/action_global_cameraFlow" app:destination="@id/cameraFlow"/>
+
+</navigation>

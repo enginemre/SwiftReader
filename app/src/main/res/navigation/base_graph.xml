@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bas_graph"
+    app:startDestination="@id/splashFragment">
+
+    <include app:graph="@navigation/auth_graph" />
+    <include app:graph="@navigation/nav_graph" />
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.engin.swiftreader.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_nav_graph"
+            app:destination="@id/nav_graph"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+<action
+            android:id="@+id/action_splashFragment_to_auth_graph"
+            app:destination="@id/auth_graph"
+            app:popUpTo="@id/splashFragment"
+            app:launchSingleTop="false"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_splashFragment"
+        app:popUpToInclusive="true"
+        app:destination="@id/splashFragment" />
+</navigation>

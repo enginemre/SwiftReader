@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SwiftReader</string>
+    <string name="home">Ana Sayfa</string>
+    <string name="profile">Profil</string>
+    <string name="camera">Kamera</string>
+    <string name="discover">Keşfet</string>
+    <string name="latest">Son İşlemlerim</string>
+    <string name="actionButton">Aksiyon buton</string>
+    <string name="email">E-Posta</string>
+    <string name="password">Parola</string>
+    <string name="login">Giriş</string>
+    <string name="or">Veya</string>
+    <string name="signUp">Kaydol</string>
+    <string name="name">İsim Soyisim</string>
+    <string name="error_google_login">Yetkilendirme başarısız</string>
+    <string name="save">Kaydet</string>
+    <string name="lorem_ipsum">
+        libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
+        vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
+    </string>
+</resources>

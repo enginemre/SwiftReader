@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextAppearance.SwiftReader.DisplayLarge" parent="TextAppearance.Material3.DisplayLarge">
+        <item name="fontFamily">@font/montserrat</item>
+    </style>
+
+    <style name="TextAppearance.SwiftReader.DisplayMedium" parent="TextAppearance.Material3.DisplayMedium">
+        <item name="fontFamily">@font/montserrat</item>
+    </style>
+
+    <style name="TextAppearance.SwiftReader.DisplaySmall" parent="TextAppearance.Material3.DisplaySmall">
+        <item name="fontFamily">@font/montserrat</item>
+    </style>
+
+    <style name="TextAppearance.SwiftReader.HeadlineLarge" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="fontFamily">@font/montserrat</item>
+    </style>
+
+    <style name="TextAppearance.SwiftReader.HeadlineMedium" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="fontFamily">@font/montserrat</item>
+    </style>
+
+    <style name="TextAppearance.SwiftReader.HeadlineSmall" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="fontFamily">@font/montserrat</item>
+    </style>
+
+    <style name="TextAppearance.SwiftReader.TitleLarge" parent="TextAppearance.Material3.TitleLarge">
+        <item name="fontFamily">@font/montserrat</item>
+    </style>
+
+    <style name="TextAppearance.SwiftReader.TitleMedium" parent="TextAppearance.Material3.TitleMedium">
+        <item name="fontFamily">@font/montserrat_medium</item>
+    </style>
+
+    <style name="TextAppearance.SwiftReader.TitleSmall" parent="TextAppearance.Material3.TitleSmall">
+        <item name="fontFamily">@font/montserrat_medium</item>
+    </style>
+
+    <style name="TextAppearance.SwiftReader.BodyLarge" parent="TextAppearance.Material3.BodyLarge">
+        <item name="fontFamily">@font/montserrat</item>
+    </style>
+
+    <style name="TextAppearance.SwiftReader.BodyMedium" parent="TextAppearance.Material3.BodyMedium">
+        <item name="fontFamily">@font/montserrat</item>
+    </style>
+
+    <style name="TextAppearance.SwiftReader.BodySmall" parent="TextAppearance.Material3.BodySmall">
+        <item name="fontFamily">@font/montserrat</item>
+    </style>
+
+    <style name="TextAppearance.SwiftReader.LabelLarge" parent="TextAppearance.Material3.LabelLarge">
+        <item name="fontFamily">@font/montserrat_medium</item>
+    </style>
+
+    <style name="TextAppearance.SwiftReader.LabelMedium" parent="TextAppearance.Material3.LabelMedium">
+        <item name="fontFamily">@font/montserrat_medium</item>
+    </style>
+
+    <style name="TextAppearance.SwiftReader.LabelSmall" parent="TextAppearance.Material3.LabelSmall">
+        <item name="fontFamily">@font/montserrat_medium</item>
+    </style>
+</resources>

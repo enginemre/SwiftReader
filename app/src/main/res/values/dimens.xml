@@ -1,0 +1,21 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="spacing_xx_small">2dp</dimen>
+    <dimen name="spacing_x_small">4dp</dimen>
+    <dimen name="spacing_small">6dp</dimen>
+    <dimen name="spacing_medium">8dp</dimen>
+    <dimen name="spacing_large">10dp</dimen>
+    <dimen name="spacing_x_large">12dp</dimen>
+    <dimen name="spacing_xx_large">16dp</dimen>
+    <dimen name="spacing_huge">24dp</dimen>
+
+    <!-- Radius  -->
+    <dimen name="radius_x_small">4dp</dimen>
+    <dimen name="radius_small">6dp</dimen>
+    <dimen name="radius_medium">8dp</dimen>
+    <dimen name="radius_large">10dp</dimen>
+    <dimen name="radius_x_large">12dp</dimen>
+    <dimen name="radius_xx_large">16dp</dimen>
+
+    <dimen name="page_corner">32dp</dimen>
+</resources>

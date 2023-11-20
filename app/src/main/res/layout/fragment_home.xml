@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".features.home.HomeFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlwaysCollapsed|snap">
+
+            <com.engin.swiftreader.features.home.BannerView
+                android:id="@+id/bannerSlider"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_height="200dp"
+                app:layout_anchor="@+id/appBarLayout"
+                app:layout_anchorGravity="center" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/homeMainRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:itemCount="2"
+        tools:listitem="@layout/item_lastest" />
+
+
+
+    <!-- <TextView
+         android:id="@+id/sectionTitleDiscovery"
+         style="@style/TextAppearance.SwiftReader.TitleMedium"
+         android:layout_width="387dp"
+         android:layout_height="wrap_content"
+         android:layout_marginHorizontal="@dimen/spacing_x_large"
+         android:layout_marginStart="12dp"
+         android:layout_marginEnd="12dp"
+         android:text="@string/discover"
+         app:layout_constraintBottom_toTopOf="@+id/discoveryRecyclerView"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/bannerSlider" />
+
+     <TextView
+         android:id="@+id/sectionTitleLatest"
+         style="@style/TextAppearance.SwiftReader.TitleMedium"
+         android:layout_width="387dp"
+         android:layout_height="wrap_content"
+         android:layout_marginHorizontal="@dimen/spacing_x_large"
+         android:layout_marginStart="12dp"
+         android:layout_marginEnd="12dp"
+         android:text="@string/latest"
+         app:layout_constraintBottom_toTopOf="@+id/latestRecyclerView"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/discoveryRecyclerView" />
+
+     <androidx.recyclerview.widget.RecyclerView
+         android:id="@+id/latestRecyclerView"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/sectionTitleLatest"
+         tools:itemCount="2"
+         tools:listitem="@layout/item_lastest" />
+
+     <androidx.recyclerview.widget.RecyclerView
+         android:id="@+id/discoveryRecyclerView"
+         android:layout_width="0dp"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+         app:layout_constraintBottom_toTopOf="@+id/sectionTitleLatest"
+         app:layout_constraintEnd_toEndOf="parent"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/sectionTitleDiscovery"
+         tools:itemCount="5"
+         tools:listitem="@layout/item_discover" />-->
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
