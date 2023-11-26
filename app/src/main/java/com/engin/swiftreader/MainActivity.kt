@@ -189,12 +189,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun hideBottomBar() {
-        binding.bottomAppBar.visibility = View.GONE
+        binding.bottomNavigation.visibility = View.GONE
         binding.bottomFabView.visibility = View.GONE
     }
 
     private fun showBottomBar() {
-        binding.bottomAppBar.visibility = View.VISIBLE
+        binding.bottomNavigation.visibility = View.VISIBLE
         binding.bottomFabView.visibility = View.VISIBLE
     }
 
