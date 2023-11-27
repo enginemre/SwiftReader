@@ -43,9 +43,9 @@ class TextWrapper : View {
         }
     }
 
-    fun scaleRectangles(width: Float, height: Float, rectangles: List<Rect>, image: Rect) {
-        val imageHeight = image.height()
-        val imageWidth = image.width()
+    fun scaleRectangles(width: Float, height: Float, rectangles: List<Rect>, image: Rect? = null,imageHeights : Int = 0,imageWidths : Int = 0) {
+        val imageHeight = image?.height() ?: imageHeights
+        val imageWidth = image?.width() ?: imageWidths
 
         val scaleX = width / imageHeight
         val scaleY = height / imageWidth

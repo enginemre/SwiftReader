@@ -1,6 +1,8 @@
 package com.engin.swiftreader
 
+import android.Manifest
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -8,6 +10,7 @@ import android.view.View
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -80,6 +83,21 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+
+    private val cameraLauncher = registerForActivityResult(
+        ActivityResultContracts.TakePicturePreview()
+    ) { bitmap ->
+        bitmap?.let {
+            navController.navigate(NavGraphDirections.actionGlobalCameraFlow(it))
+        }
+    }
+
+    private val permissionLauncher = registerForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ) { isGranted ->
+        if (isGranted)
+            handlePermission()
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -162,10 +180,26 @@ class MainActivity : AppCompatActivity() {
             AppBarConfiguration(setOf(R.id.homeFlow, R.id.cameraFlow, R.id.profileFlow))
         setupActionBarWithNavController(navController, appBarConfiguration)
         binding.bottomNavigation.setupWithNavController(navController)
-        binding.bottomFabView.setOnClickListener { navController.navigate(NavGraphDirections.actionGlobalCameraFlow()) }
+        binding.bottomFabView.setOnClickListener {
+            handlePermission()
+        }
         navController.addOnDestinationChangedListener(navDestinationChangeListener)
         navController.setGraph(R.navigation.base_graph)
         googleSignInClient = GoogleSignIn.getClient(this, gso)
+    }
+
+    private fun checkPermission() =
+        ContextCompat.checkSelfPermission(
+            this@MainActivity,
+            Manifest.permission.CAMERA
+        ) == PackageManager.PERMISSION_GRANTED
+
+    private fun handlePermission() {
+        if (checkPermission()) {
+            cameraLauncher.launch(null)
+        } else {
+            permissionLauncher.launch(Manifest.permission.CAMERA)
+        }
     }
 
     private fun showFullScreen() {

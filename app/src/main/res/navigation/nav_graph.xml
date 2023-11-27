@@ -26,7 +26,11 @@
         android:id="@+id/cameraFlow"
         android:name="com.engin.swiftreader.features.readfromcamera.ReadWithCameraFragment"
         android:label="@string/camera"
-        tools:layout="@layout/fragment_read_with_camera" />
+        tools:layout="@layout/fragment_read_with_camera" >
+        <argument
+            android:name="image"
+            app:argType="android.graphics.Bitmap" />
+    </fragment>
     <fragment
         android:id="@+id/readDetailFragment"
         android:name="com.engin.swiftreader.features.read_detail.ReadDetailFragment"
@@ -36,6 +40,9 @@
         android:id="@+id/playFragment"
         android:name="com.engin.swiftreader.features.play.PlayFragment"
         android:label="PlayFragment"
-        tools:layout="@layout/fragment_play" /><action android:id="@+id/action_global_cameraFlow" app:destination="@id/cameraFlow"/>
+        tools:layout="@layout/fragment_play" />
+    <action
+        android:id="@+id/action_global_cameraFlow"
+        app:destination="@id/cameraFlow" />
 
 </navigation>
